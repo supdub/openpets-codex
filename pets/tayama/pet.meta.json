@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schemas/pet-metadata.schema.json",
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "OpenPets for Codex contributors",
+      "url": "https://github.com/supdub/openpets-codex"
+    }
+  ],
+  "assetLicense": "LicenseRef-FanArt-NonCommercial",
+  "spritesheetSha256": "bb7b05e3ebcce4df510c6c1d225b19deeb7c05d7307dc725016ecdc924f95125",
+  "tags": [
+    "anime",
+    "fan-art",
+    "pixel-art",
+    "smoking",
+    "supermarket"
+  ],
+  "provenance": {
+    "aiAssisted": true,
+    "thirdPartyCharacter": true,
+    "redistributionConfirmed": true,
+    "notes": "Generated from text prompts with OpenAI image generation and assembled with deterministic local sprite tooling; no official images, screenshots, extracted sprites, or traced artwork were used as inputs. This is unofficial fan art, and all underlying character, title, and franchise rights remain with their owners.",
+    "referenceSources": [
+      "https://yanisuu.com/character/",
+      "https://magazine.jp.square-enix.com/biggangan/introduction/yanisuu/",
+      "https://magazine.jp.square-enix.com/top/comics/detail/9784757580947/"
+    ]
+  },
+  "testedWith": {
+    "codexDesktop": "26.707.3748.0"
+  }
+}

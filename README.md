@@ -17,6 +17,7 @@ package that Codex loads locally.
 | **Pixel 星野爱** (`hoshino-ai`) | See [`pets/hoshino-ai`](pets/hoshino-ai) | Unofficial, AI-assisted fan art; separate asset terms apply. |
 | **Kneeling Sam Altman** (`sam-altman`) | See [`pets/sam-altman`](pets/sam-altman) | Unofficial public-figure caricature; separate likeness terms apply. |
 | **Pixel Makise Kurisu** (`makise-kurisu`) | See [`pets/makise-kurisu`](pets/makise-kurisu) | Unofficial, AI-assisted fan art; separate asset terms apply. |
+| **Pixel Tayama** (`tayama`) | See [`pets/tayama`](pets/tayama) | Unofficial, AI-assisted fan art; separate asset terms apply. |
 
 ## Install a pet
 

@@ -47,6 +47,23 @@
       ],
       "assetLicense": "LicenseRef-Likeness-NonCommercial",
       "spritesheetSha256": "55cab1a2a7df781247ebe9ea35a9ca0f1b01ee69efb6b3545172ddd2190bfd29"
+    },
+    {
+      "id": "tayama",
+      "displayName": "Pixel Tayama",
+      "description": "An unofficial fan-made pixel companion inspired by Tayama on a supermarket-back-door smoke break.",
+      "version": "1.0.0",
+      "path": "pets/tayama",
+      "preview": "pets/tayama/preview/00-idle.gif",
+      "tags": [
+        "anime",
+        "fan-art",
+        "pixel-art",
+        "smoking",
+        "supermarket"
+      ],
+      "assetLicense": "LicenseRef-FanArt-NonCommercial",
+      "spritesheetSha256": "bb7b05e3ebcce4df510c6c1d225b19deeb7c05d7307dc725016ecdc924f95125"
     }
   ]
 }
