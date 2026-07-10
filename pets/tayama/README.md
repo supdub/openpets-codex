@@ -4,9 +4,12 @@ An unofficial fan-made pixel Codex pet inspired by Tayama from *Smoking Behind t
 with You*. Her animation stages a quiet nighttime smoke break against a compact, generic
 supermarket rear-service vignette and follows the native Codex desktop v2 contract.
 
-The long-form loops move naturally between standing and sitting while she takes out a cigarette,
-lights it, smokes it down to a tiny stub, and starts again. Hovering the mouse makes her wave instead
-of jump, and a completed task gets its own cheerful settling wave.
+Her 6.6-second idle stays seated throughout. About 5.76 seconds show lit smoking—slow exhales, a
+blink through the draw, an ash tap, the final stub, and the next long draw—while 0.84 seconds handle
+relighting. Small hand, ankle, ember, smoke, and side-eye beats keep the pose alive without
+repeatedly standing up. Hovering, waiting, and task completion use their own seated gestures. Drag
+travel, greeting, failure and recovery, active work, and gaze tracking retain contextual standing
+poses. The generic supermarket rear-service plate stays locked and pixel-still behind her.
 
 ![Idle smoking animation](preview/00-idle.gif)
 
