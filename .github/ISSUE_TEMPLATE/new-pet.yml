@@ -24,6 +24,7 @@ body:
         - Commissioned with redistribution rights
         - AI-assisted original character
         - Third-party character fan content
+        - Living public figure likeness
         - Other / unsure
     validations:
       required: true

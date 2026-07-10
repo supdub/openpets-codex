@@ -15,6 +15,7 @@
 
 - [ ] I created these assets or have permission to submit and redistribute them.
 - [ ] `pet.meta.json` truthfully describes AI assistance and third-party characters.
+- [ ] I disclosed any living-person likeness and did not imply endorsement or grant rights I lack.
 - [ ] `LICENSE-ASSETS.md` contains the complete terms and required attribution.
 - [ ] I did not include private references, extracted assets, screenshots, traced art, or secrets.
 

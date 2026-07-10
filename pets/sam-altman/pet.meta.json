@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schemas/pet-metadata.schema.json",
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "OpenPets for Codex contributors",
+      "url": "https://github.com/supdub/openpets-codex"
+    }
+  ],
+  "assetLicense": "LicenseRef-Likeness-NonCommercial",
+  "spritesheetSha256": "55cab1a2a7df781247ebe9ea35a9ca0f1b01ee69efb6b3545172ddd2190bfd29",
+  "tags": [
+    "kneeling",
+    "pixel-art",
+    "public-figure"
+  ],
+  "provenance": {
+    "aiAssisted": true,
+    "thirdPartyCharacter": false,
+    "thirdPartySubject": "Sam Altman (living public figure)",
+    "publicFigureLikeness": true,
+    "redistributionConfirmed": true,
+    "notes": "Generated from text prompts with OpenAI image generation; no photographs, official images, logos, or traced art were used. This is an unofficial editorial caricature and grants no rights in the subject's name or likeness."
+  },
+  "testedWith": {
+    "codexDesktop": "26.707.3748.0"
+  }
+}

@@ -5,9 +5,10 @@ import shutil
 from pathlib import Path
 
 import pytest
-from PIL import Image
+from PIL import Image, ImageDraw
 
 from openpets.cli import main
+from openpets.contract import CELL_HEIGHT, CELL_WIDTH
 from openpets.preview import PreviewError, check_previews, render_previews
 from tests.helpers import make_pet
 
@@ -54,8 +55,40 @@ def test_preview_rejects_symlinked_output_target(tmp_path) -> None:
 
 
 def test_current_committed_previews_are_semantically_current() -> None:
-    current, messages = check_previews(REPO_ROOT / "pets" / "hoshino-ai")
-    assert current, "\n".join(messages)
+    pet_dirs = sorted(path for path in (REPO_ROOT / "pets").iterdir() if path.is_dir())
+    assert pet_dirs
+    for pet_dir in pet_dirs:
+        current, messages = check_previews(pet_dir)
+        assert current, f"{pet_dir.name}:\n" + "\n".join(messages)
+
+
+def test_rendered_gif_preserves_adaptive_transparency_index(tmp_path) -> None:
+    pet_dir = make_pet(tmp_path)
+    spritesheet = pet_dir / "spritesheet.webp"
+    with Image.open(spritesheet) as source:
+        atlas = source.convert("RGBA")
+    draw = ImageDraw.Draw(atlas)
+    for column in range(6):
+        left = column * CELL_WIDTH
+        draw.rectangle(
+            (left, 0, left + CELL_WIDTH - 1, CELL_HEIGHT - 1),
+            fill=(0, 0, 0, 0),
+        )
+        draw.rectangle(
+            (left + 24, 24, left + 167, 183),
+            fill=(220 - column * 10, 80 + column * 10, 160, 255),
+        )
+    atlas.save(spritesheet, format="WEBP", lossless=True, method=6)
+
+    render_previews(pet_dir)
+
+    with Image.open(pet_dir / "preview" / "00-idle.gif") as idle:
+        assert idle.n_frames == 6
+        for frame_index in range(idle.n_frames):
+            idle.seek(frame_index)
+            rgba = idle.convert("RGBA")
+            assert rgba.getpixel((0, 0))[3] == 0
+            assert rgba.getpixel((96, 104))[3] == 255
 
 
 def test_check_previews_rejects_one_pixel_contact_sheet_change(tmp_path) -> None:

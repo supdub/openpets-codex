@@ -134,7 +134,6 @@ def render_previews(pet_dir: Path, output_dir: Path | None = None) -> list[Path]
                 duration=list(row.durations_ms),
                 loop=0,
                 disposal=2,
-                transparency=0,
             )
             written.append(gif_path)
 

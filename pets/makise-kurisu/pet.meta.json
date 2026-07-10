@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schemas/pet-metadata.schema.json",
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "OpenPets for Codex contributors",
+      "url": "https://github.com/supdub/openpets-codex"
+    }
+  ],
+  "assetLicense": "LicenseRef-FanArt-NonCommercial",
+  "spritesheetSha256": "3d58130ae4ef991221bf4ec511f8813454afc64712b8a84100aca93704c2ac8a",
+  "tags": [
+    "anime",
+    "fan-art",
+    "pixel-art",
+    "scientist"
+  ],
+  "provenance": {
+    "aiAssisted": true,
+    "thirdPartyCharacter": true,
+    "redistributionConfirmed": true,
+    "notes": "Generated from text prompts with OpenAI image generation; no official images, extracted sprites, or traced art were used. Underlying character and franchise rights remain with their owners."
+  },
+  "testedWith": {
+    "codexDesktop": "26.707.3748.0"
+  }
+}

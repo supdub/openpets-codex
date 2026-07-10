@@ -10,19 +10,25 @@ package that Codex loads locally.
 > OpenPets for Codex is an independent community project. It is not affiliated with or endorsed
 > by OpenAI, the unrelated OpenPets project, or the owners of any third-party characters.
 
-## Included pet
+## Included pets
 
 | Pet | Preview | Notes |
 | --- | --- | --- |
 | **Pixel 星野爱** (`hoshino-ai`) | See [`pets/hoshino-ai`](pets/hoshino-ai) | Unofficial, AI-assisted fan art; separate asset terms apply. |
+| **Kneeling Sam Altman** (`sam-altman`) | See [`pets/sam-altman`](pets/sam-altman) | Unofficial public-figure caricature; separate likeness terms apply. |
+| **Pixel Makise Kurisu** (`makise-kurisu`) | See [`pets/makise-kurisu`](pets/makise-kurisu) | Unofficial, AI-assisted fan art; separate asset terms apply. |
 
 ## Install a pet
 
 ### One click (Codex Desktop)
 
-[Install Pixel 星野爱 in Codex](codex://pets/install?name=Pixel+%E6%98%9F%E9%87%8E%E7%88%B1&imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsupdub%2Fopenpets-codex%2Fv0.1.0%2Fpets%2Fhoshino-ai%2Fspritesheet.webp&description=An+unofficial+fan-made+pixel+idol+companion+with+starry+eyes.&spriteVersionNumber=2)
+[Install Pixel 星野爱 in Codex](codex://pets/install?name=Pixel+%E6%98%9F%E9%87%8E%E7%88%B1&imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsupdub%2Fopenpets-codex%2Fv0.2.0%2Fpets%2Fhoshino-ai%2Fspritesheet.webp&description=An+unofficial+fan-made+pixel+idol+companion+with+starry+eyes.&spriteVersionNumber=2)
 
-The link is pinned to the `v0.1.0` tag. Codex previews and validates the package before installing
+[Install Kneeling Sam Altman in Codex](codex://pets/install?name=Kneeling+Sam+Altman&imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsupdub%2Fopenpets-codex%2Fv0.2.0%2Fpets%2Fsam-altman%2Fspritesheet.webp&description=An+unofficial+pixel+caricature+of+Sam+Altman%2C+thoughtfully+kneeling+between+coding+tasks.&spriteVersionNumber=2)
+
+[Install Pixel Makise Kurisu in Codex](codex://pets/install?name=Pixel+Makise+Kurisu&imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsupdub%2Fopenpets-codex%2Fv0.2.0%2Fpets%2Fmakise-kurisu%2Fspritesheet.webp&description=An+unofficial+fan-made+pixel+scientist+companion+inspired+by+Makise+Kurisu.&spriteVersionNumber=2)
+
+The links are pinned to the `v0.2.0` tag. Codex previews and validates a package before installing
 it. App-managed one-click installs may use an app-derived local folder name, so `openpets doctor`
 is intended for CLI installs. Use the same method to update a pet. If your browser does not open
 custom links, use the catalog CLI below.
@@ -43,14 +49,16 @@ Activate the environment and install the small CLI:
 # Windows PowerShell
 .\.venv\Scripts\Activate.ps1
 python -m pip install -e .
-openpets install hoshino-ai
+openpets list
+openpets install sam-altman  # Replace with any listed pet ID.
 ```
 
 ```bash
 # macOS or Linux
 source .venv/bin/activate
 python -m pip install -e .
-openpets install hoshino-ai
+openpets list
+openpets install sam-altman  # Replace with any listed pet ID.
 ```
 
 Then open **Codex Settings → Pets**, choose **Refresh**, select the pet, and choose **Wake Pet**.

@@ -21,6 +21,18 @@ Do not submit extracted game assets, official animation frames, traced art, copy
 screenshots, or trademark-heavy designs without written permission. Maintainers may reject or
 remove a pet when provenance or rights are uncertain.
 
+## Living people
+
+A recognizable living-person likeness is not an original character and needs its own disclosure.
+Use a custom asset notice that identifies the subject, states whether the work is caricature or
+portraiture, and avoids implying endorsement, sponsorship, or affiliation. Do not use private or
+unlicensed photographs, logos, signature brand assets, or misleading captions as inputs.
+
+Contributors may license only the original rendering rights they hold. A pet notice cannot grant
+the subject's name, likeness, privacy, publicity, trademark, or false-endorsement rights, which
+vary by jurisdiction. Prefer respectful, non-defamatory depictions, mark them unofficial, and
+provide the same good-faith takedown path used for fan content.
+
 ## Required metadata
 
 Every pet declares:

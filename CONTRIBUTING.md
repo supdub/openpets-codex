@@ -51,8 +51,10 @@ idle loop.
 
 By submitting assets, you confirm that you created them or have permission to redistribute them
 under the declared terms. Say whether the work is original, commissioned, or AI-assisted and
-whether a third-party character is depicted. Do not submit traced art, leaked assets, screenshots,
-logos, or copyrighted references you cannot redistribute.
+whether a third-party character or recognizable living person is depicted. For a living person,
+identify the subject, keep the depiction respectful and unofficial, and disclose the likeness,
+publicity, privacy, trademark, and endorsement limits in the asset notice. Do not submit traced
+art, leaked assets, screenshots, logos, or copyrighted references you cannot redistribute.
 
 Fan content is reviewed case by case and must have a clear notice. Maintainers may reject or
 remove content when rights are unclear. Read [ASSET_POLICY.md](ASSET_POLICY.md).

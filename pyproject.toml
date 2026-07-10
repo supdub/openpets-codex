@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "openpets-codex"
-version = "0.1.0"
+version = "0.2.0"
 description = "A contributor-friendly catalog and toolchain for native Codex desktop pets."
 readme = "README.md"
 license = { file = "LICENSE" }
