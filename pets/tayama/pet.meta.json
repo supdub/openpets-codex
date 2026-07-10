@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/pet-metadata.schema.json",
   "schemaVersion": 1,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "OpenPets for Codex contributors",
@@ -9,7 +9,7 @@
     }
   ],
   "assetLicense": "LicenseRef-FanArt-NonCommercial",
-  "spritesheetSha256": "bb7b05e3ebcce4df510c6c1d225b19deeb7c05d7307dc725016ecdc924f95125",
+  "spritesheetSha256": "c5ab9d579bcad7b03f01ba6bf9fcf72e8e5a71679a8cf18ec963d6f0d619e942",
   "tags": [
     "anime",
     "fan-art",

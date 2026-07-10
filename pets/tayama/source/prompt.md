@@ -10,11 +10,18 @@ knowing side-glance, costume, palette, proportions, and silhouette remain stable
 
 ## Scene and smoking motif
 
-- One lit cigarette stays visibly in hand, with a small orange ember.
+- The standing-to-seated loops tell a complete repeatable cigarette story: empty hand, take out a
+  full unlit cigarette, bring up the lighter, touch flame to the tip, inhale and exhale as the
+  cigarette visibly shortens, rise with a tiny final stub, then return to standing with the
+  cigarette completely gone before the next cycle.
+- Whenever present, the cigarette remains in the screen-left hand and the lighter or free gesture
+  remains on screen-right. The lighter appears only during take-out and ignition, and flame appears
+  only where it physically touches the tip.
 - Smoke is a thin, hard-edged, continuous curl attached to the cigarette or mouth, never a detached
   cloud.
-- The stationary rows include an inhale, ember pulse, exhale, restrained side-eye, and subtle
-  weight shifts.
+- Idle and waiting use a shared standing anchor plus half-lowered, fully seated, and half-risen
+  poses so the switch between standing and sitting reads as one continuous movement. The seated
+  phase includes an inhale, ember pulse, exhale, restrained side-eye, and subtle weight shifts.
 - A compact generic nighttime supermarket rear-service vignette stays inside the sprite footprint:
   gray metal service door and wall, tiny fluorescent lamp, narrow blue service panel, yellow crate,
   tall metal ashtray, and a small pavement base.
@@ -28,13 +35,24 @@ knowing side-glance, costume, palette, proportions, and silhouette remain stable
 - Designed to remain readable inside a `192x208` cell.
 - Generated on a flat green chroma key, extracted into registered frame slots, edge-despilled,
   alpha-hardened for clean pixel edges and GIF previews, and assembled as a lossless RGBA WebP.
+- Idle, hover, waiting, and completion foregrounds are composited over one identical locked
+  supermarket plate, so the door, lamp, blue panel, crate, ashtray, steps, and pavement remain
+  pixel-still while Tayama changes pose.
 
 ## State constraints
 
-Rows follow `docs/PET_FORMAT.md`: calm smoking idle, right and left travel, free-hand wave,
-five-stage jump, failed slump and recovery, expectant waiting, focused active work, satisfied
-review, and a clockwise 16-direction look loop. Row 0 column 6 contains the neutral look frame.
-Every used frame preserves the character, cigarette, scene orientation, scale, and safe padding;
+Rows follow `docs/PET_FORMAT.md`: the six-frame idle moves from standing through lighting and
+seated smoking back to standing; right and left travel remain unchanged; the greeting row keeps its
+free-hand wave; the technical `jumping` row is deliberately illustrated as a planted five-frame
+mouse-hover wave with no jump; failed keeps its slump and recovery; waiting repeats the seamless
+standing-to-seated cigarette lifecycle with an open-palm waiting beat; active work remains focused;
+review is a planted six-frame task-completion wave that settles back to neutral; and the final two
+rows contain the clockwise 16-direction look loop. The hover and completion waves contain no
+cigarette so their first and last poses connect cleanly to the no-cigarette standing anchor.
+
+Row 0 column 6 contains the neutral look frame. The fixed v2 atlas has no persistent sit/stand mode
+flag, so the two modes are authored as continuous pose phases with shared anchors inside idle and
+waiting. Every used frame preserves the character, scene orientation, scale, and safe padding;
 unused cells are fully transparent.
 
 ## Tool provenance
