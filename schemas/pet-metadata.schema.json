@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/supdub/openpets-codex/raw/main/schemas/pet-metadata.schema.json",
+  "title": "OpenPets repository metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "version",
+    "authors",
+    "assetLicense",
+    "spritesheetSha256",
+    "tags",
+    "provenance",
+    "testedWith"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?$"
+    },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "assetLicense": { "type": "string", "minLength": 1 },
+    "spritesheetSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["aiAssisted", "thirdPartyCharacter", "redistributionConfirmed"],
+      "properties": {
+        "aiAssisted": { "type": "boolean" },
+        "thirdPartyCharacter": { "type": "boolean" },
+        "redistributionConfirmed": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "testedWith": {
+      "type": "object",
+      "required": ["codexDesktop"],
+      "properties": {
+        "codexDesktop": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

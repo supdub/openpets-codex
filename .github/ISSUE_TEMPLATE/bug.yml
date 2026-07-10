@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a validator, installer, documentation, or compatibility problem.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting a problem. Do not include credentials or private artwork.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Pet rendering
+        - Installation
+        - Validation
+        - Contributor tooling
+        - Documentation
+    validations:
+      required: true
+  - type: input
+    id: codex-version
+    attributes:
+      label: Codex Desktop version
+      placeholder: 26.707.3748.0
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Validation output or screenshots

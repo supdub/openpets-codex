@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "openpets-codex"
+version = "0.1.0"
+description = "A contributor-friendly catalog and toolchain for native Codex desktop pets."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "OpenPets for Codex contributors" }]
+keywords = ["codex", "desktop-pet", "pixel-art", "spritesheet"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = ["Pillow>=12.1,<13"]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+openpets = "openpets.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/supdub/openpets-codex"
+Repository = "https://github.com/supdub/openpets-codex"
+Issues = "https://github.com/supdub/openpets-codex/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/openpets"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

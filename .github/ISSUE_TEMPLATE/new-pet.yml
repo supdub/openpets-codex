@@ -1,0 +1,42 @@
+name: Propose a pet
+description: Discuss a pet concept, provenance, or rights before opening a pull request.
+title: "[Pet]: "
+labels: [pet]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Pet name and proposed ID
+    validations:
+      required: true
+  - type: textarea
+    id: concept
+    attributes:
+      label: Visual concept and animation approach
+    validations:
+      required: true
+  - type: dropdown
+    id: origin
+    attributes:
+      label: Asset origin
+      options:
+        - Original character
+        - Commissioned with redistribution rights
+        - AI-assisted original character
+        - Third-party character fan content
+        - Other / unsure
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: Proposed asset license, attribution, and rights notes
+    validations:
+      required: true
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: Policy
+      options:
+        - label: I read ASSET_POLICY.md and will disclose all source/reference material.
+          required: true

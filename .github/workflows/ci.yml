@@ -1,0 +1,58 @@
+name: Validate pets
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Python ${{ matrix.python }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - name: Install
+        run: python -m pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Test
+        run: pytest
+      - name: Validate catalog
+        run: openpets validate --all --strict --check-registry
+      - name: Verify committed previews are current
+        run: openpets preview --all --check
+      - name: Smoke-generate previews
+        run: openpets preview --all --output .work/ci-previews
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pet-preview-${{ matrix.os }}-py${{ matrix.python }}
+          path: .work/ci-previews
+          if-no-files-found: ignore
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test minimum Pillow version
+        run: |
+          python -m pip install -e ".[dev]" "Pillow==12.1.0"
+          pytest
+      - run: python -m build

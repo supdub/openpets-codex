@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "pets": [
+    {
+      "id": "hoshino-ai",
+      "displayName": "Pixel 星野爱",
+      "description": "An unofficial fan-made pixel idol companion with starry eyes.",
+      "version": "1.0.0",
+      "path": "pets/hoshino-ai",
+      "preview": "pets/hoshino-ai/preview/00-idle.gif",
+      "tags": [
+        "anime",
+        "fan-art",
+        "idol",
+        "pixel-art"
+      ],
+      "assetLicense": "LicenseRef-FanArt-NonCommercial",
+      "spritesheetSha256": "e575b26300fcfca4dfd65cd3e346daf9e45c97ae7d2a4204f48dbdef42ac01e4"
+    }
+  ]
+}

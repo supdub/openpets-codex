@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schemas/pet-metadata.schema.json",
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "OpenPets for Codex contributors",
+      "url": "https://github.com/supdub/openpets-codex"
+    }
+  ],
+  "assetLicense": "LicenseRef-FanArt-NonCommercial",
+  "spritesheetSha256": "e575b26300fcfca4dfd65cd3e346daf9e45c97ae7d2a4204f48dbdef42ac01e4",
+  "tags": [
+    "anime",
+    "fan-art",
+    "idol",
+    "pixel-art"
+  ],
+  "provenance": {
+    "aiAssisted": true,
+    "thirdPartyCharacter": true,
+    "redistributionConfirmed": true,
+    "notes": "Generated from text prompts with OpenAI image generation; no official images, extracted sprites, or traced art were used. Underlying character rights remain with their owners."
+  },
+  "testedWith": {
+    "codexDesktop": "26.707.3748.0"
+  }
+}
